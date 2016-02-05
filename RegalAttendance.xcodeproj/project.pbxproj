@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3DB3E281C6445CE008EC0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB3E271C6445CE008EC0D0 /* AppDelegate.swift */; };
+		F3DB3E2A1C6445CE008EC0D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB3E291C6445CE008EC0D0 /* ViewController.swift */; };
+		F3DB3E2D1C6445CE008EC0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB3E2B1C6445CE008EC0D0 /* Main.storyboard */; };
+		F3DB3E2F1C6445CE008EC0D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3DB3E2E1C6445CE008EC0D0 /* Assets.xcassets */; };
+		F3DB3E321C6445CE008EC0D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3DB3E301C6445CE008EC0D0 /* LaunchScreen.storyboard */; };
+		F3DB3E3D1C6445CE008EC0D0 /* RegalAttendanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB3E3C1C6445CE008EC0D0 /* RegalAttendanceUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3DB3E391C6445CE008EC0D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3DB3E1C1C6445CE008EC0D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3DB3E231C6445CE008EC0D0;
+			remoteInfo = RegalAttendance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F3DB3E241C6445CE008EC0D0 /* RegalAttendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegalAttendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DB3E271C6445CE008EC0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3DB3E291C6445CE008EC0D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3DB3E2C1C6445CE008EC0D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3DB3E2E1C6445CE008EC0D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3DB3E311C6445CE008EC0D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3DB3E331C6445CE008EC0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3DB3E381C6445CE008EC0D0 /* RegalAttendanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegalAttendanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DB3E3C1C6445CE008EC0D0 /* RegalAttendanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegalAttendanceUITests.swift; sourceTree = "<group>"; };
+		F3DB3E3E1C6445CE008EC0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3DB3E211C6445CE008EC0D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DB3E351C6445CE008EC0D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3DB3E1B1C6445CE008EC0D0 = {
+			isa = PBXGroup;
+			children = (
+				F3DB3E261C6445CE008EC0D0 /* RegalAttendance */,
+				F3DB3E3B1C6445CE008EC0D0 /* RegalAttendanceUITests */,
+				F3DB3E251C6445CE008EC0D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3DB3E251C6445CE008EC0D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3DB3E241C6445CE008EC0D0 /* RegalAttendance.app */,
+				F3DB3E381C6445CE008EC0D0 /* RegalAttendanceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3DB3E261C6445CE008EC0D0 /* RegalAttendance */ = {
+			isa = PBXGroup;
+			children = (
+				F3DB3E271C6445CE008EC0D0 /* AppDelegate.swift */,
+				F3DB3E291C6445CE008EC0D0 /* ViewController.swift */,
+				F3DB3E2B1C6445CE008EC0D0 /* Main.storyboard */,
+				F3DB3E2E1C6445CE008EC0D0 /* Assets.xcassets */,
+				F3DB3E301C6445CE008EC0D0 /* LaunchScreen.storyboard */,
+				F3DB3E331C6445CE008EC0D0 /* Info.plist */,
+			);
+			path = RegalAttendance;
+			sourceTree = "<group>";
+		};
+		F3DB3E3B1C6445CE008EC0D0 /* RegalAttendanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3DB3E3C1C6445CE008EC0D0 /* RegalAttendanceUITests.swift */,
+				F3DB3E3E1C6445CE008EC0D0 /* Info.plist */,
+			);
+			path = RegalAttendanceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3DB3E231C6445CE008EC0D0 /* RegalAttendance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3DB3E411C6445CE008EC0D0 /* Build configuration list for PBXNativeTarget "RegalAttendance" */;
+			buildPhases = (
+				F3DB3E201C6445CE008EC0D0 /* Sources */,
+				F3DB3E211C6445CE008EC0D0 /* Frameworks */,
+				F3DB3E221C6445CE008EC0D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RegalAttendance;
+			productName = RegalAttendance;
+			productReference = F3DB3E241C6445CE008EC0D0 /* RegalAttendance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3DB3E371C6445CE008EC0D0 /* RegalAttendanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3DB3E441C6445CE008EC0D0 /* Build configuration list for PBXNativeTarget "RegalAttendanceUITests" */;
+			buildPhases = (
+				F3DB3E341C6445CE008EC0D0 /* Sources */,
+				F3DB3E351C6445CE008EC0D0 /* Frameworks */,
+				F3DB3E361C6445CE008EC0D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3DB3E3A1C6445CE008EC0D0 /* PBXTargetDependency */,
+			);
+			name = RegalAttendanceUITests;
+			productName = RegalAttendanceUITests;
+			productReference = F3DB3E381C6445CE008EC0D0 /* RegalAttendanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3DB3E1C1C6445CE008EC0D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Regal System";
+				TargetAttributes = {
+					F3DB3E231C6445CE008EC0D0 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = GD9579ZT9J;
+					};
+					F3DB3E371C6445CE008EC0D0 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = GD9579ZT9J;
+						TestTargetID = F3DB3E231C6445CE008EC0D0;
+					};
+				};
+			};
+			buildConfigurationList = F3DB3E1F1C6445CE008EC0D0 /* Build configuration list for PBXProject "RegalAttendance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3DB3E1B1C6445CE008EC0D0;
+			productRefGroup = F3DB3E251C6445CE008EC0D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3DB3E231C6445CE008EC0D0 /* RegalAttendance */,
+				F3DB3E371C6445CE008EC0D0 /* RegalAttendanceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3DB3E221C6445CE008EC0D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3DB3E321C6445CE008EC0D0 /* LaunchScreen.storyboard in Resources */,
+				F3DB3E2F1C6445CE008EC0D0 /* Assets.xcassets in Resources */,
+				F3DB3E2D1C6445CE008EC0D0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DB3E361C6445CE008EC0D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3DB3E201C6445CE008EC0D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3DB3E2A1C6445CE008EC0D0 /* ViewController.swift in Sources */,
+				F3DB3E281C6445CE008EC0D0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3DB3E341C6445CE008EC0D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3DB3E3D1C6445CE008EC0D0 /* RegalAttendanceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3DB3E3A1C6445CE008EC0D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3DB3E231C6445CE008EC0D0 /* RegalAttendance */;
+			targetProxy = F3DB3E391C6445CE008EC0D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3DB3E2B1C6445CE008EC0D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3DB3E2C1C6445CE008EC0D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3DB3E301C6445CE008EC0D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3DB3E311C6445CE008EC0D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3DB3E3F1C6445CE008EC0D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3DB3E401C6445CE008EC0D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3DB3E421C6445CE008EC0D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RegalAttendance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = regalscan.com.RegalAttendance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3DB3E431C6445CE008EC0D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RegalAttendance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = regalscan.com.RegalAttendance;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F3DB3E451C6445CE008EC0D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RegalAttendanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = regalscan.com.RegalAttendanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RegalAttendance;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F3DB3E461C6445CE008EC0D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RegalAttendanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = regalscan.com.RegalAttendanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RegalAttendance;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3DB3E1F1C6445CE008EC0D0 /* Build configuration list for PBXProject "RegalAttendance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3DB3E3F1C6445CE008EC0D0 /* Debug */,
+				F3DB3E401C6445CE008EC0D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3DB3E411C6445CE008EC0D0 /* Build configuration list for PBXNativeTarget "RegalAttendance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3DB3E421C6445CE008EC0D0 /* Debug */,
+				F3DB3E431C6445CE008EC0D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3DB3E441C6445CE008EC0D0 /* Build configuration list for PBXNativeTarget "RegalAttendanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3DB3E451C6445CE008EC0D0 /* Debug */,
+				F3DB3E461C6445CE008EC0D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3DB3E1C1C6445CE008EC0D0 /* Project object */;
+}
