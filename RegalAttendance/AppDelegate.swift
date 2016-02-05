@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  RegalAttendance
+//  CanlendarTest
 //
-//  Created by Regal System on 2016/2/5.
+//  Created by Regal System on 2016/1/22.
 //  Copyright © 2016年 Regal System. All rights reserved.
 //
 
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Global.rootView = window?.rootViewController
         return true
     }
 
