@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B4140F57FF5D9CD21788651 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96C0CF97156E6EA516AD5FC2 /* Pods.framework */; };
+		F34997841C86E53500FE7813 /* OutgoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34997831C86E53500FE7813 /* OutgoingViewController.swift */; };
 		F3C1BB9E1C6455E1008CE7D2 /* clsAttendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C1BB9D1C6455E1008CE7D2 /* clsAttendance.swift */; };
 		F3C1F76A1C6447EB0006D963 /* Pods in Resources */ = {isa = PBXBuildFile; fileRef = F3C1F7691C6447EB0006D963 /* Pods */; };
 		F3DB3E281C6445CE008EC0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DB3E271C6445CE008EC0D0 /* AppDelegate.swift */; };
@@ -76,9 +77,10 @@
 		05787785B6A3CCEFB1952A86 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8D49ED621029CF5F33F1FA64 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		96C0CF97156E6EA516AD5FC2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34997831C86E53500FE7813 /* OutgoingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingViewController.swift; sourceTree = "<group>"; };
 		F3C1BB9D1C6455E1008CE7D2 /* clsAttendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clsAttendance.swift; sourceTree = "<group>"; };
 		F3C1F7691C6447EB0006D963 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Pods; path = /Users/rgsystem/Documents/RegalAttendance/Pods; sourceTree = "<absolute>"; };
-		F3DB3E241C6445CE008EC0D0 /* RegalAttendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegalAttendance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3DB3E241C6445CE008EC0D0 /* 帝商差勤.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "帝商差勤.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3DB3E271C6445CE008EC0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3DB3E291C6445CE008EC0D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3DB3E2C1C6445CE008EC0D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -200,7 +202,7 @@
 		F3DB3E251C6445CE008EC0D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3DB3E241C6445CE008EC0D0 /* RegalAttendance.app */,
+				F3DB3E241C6445CE008EC0D0 /* 帝商差勤.app */,
 				F3DB3E381C6445CE008EC0D0 /* RegalAttendanceUITests.xctest */,
 			);
 			name = Products;
@@ -225,6 +227,7 @@
 				F3DB3E301C6445CE008EC0D0 /* LaunchScreen.storyboard */,
 				F3DB3E331C6445CE008EC0D0 /* Info.plist */,
 				F3C1BB9D1C6455E1008CE7D2 /* clsAttendance.swift */,
+				F34997831C86E53500FE7813 /* OutgoingViewController.swift */,
 			);
 			path = RegalAttendance;
 			sourceTree = "<group>";
@@ -292,7 +295,7 @@
 			);
 			name = RegalAttendance;
 			productName = RegalAttendance;
-			productReference = F3DB3E241C6445CE008EC0D0 /* RegalAttendance.app */;
+			productReference = F3DB3E241C6445CE008EC0D0 /* 帝商差勤.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F3DB3E371C6445CE008EC0D0 /* RegalAttendanceUITests */ = {
@@ -448,6 +451,7 @@
 				F3C1BB9E1C6455E1008CE7D2 /* clsAttendance.swift in Sources */,
 				F3E5DA971C644B8F00A68A3A /* CVCalendarMonthView.swift in Sources */,
 				F3E5DAA91C644B8F00A68A3A /* CVWeekdaySymbolType.swift in Sources */,
+				F34997841C86E53500FE7813 /* OutgoingViewController.swift in Sources */,
 				F3E5DAA61C644B8F00A68A3A /* CVSelectionType.swift in Sources */,
 				F3DB3E651C644658008EC0D0 /* UITableViewCellCanlendar.swift in Sources */,
 				F3E5DA9C1C644B8F00A68A3A /* CVCalendarViewAppearance.swift in Sources */,
@@ -604,10 +608,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RegalAttendance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = regalscan.com.RegalAttendance;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Regal.com.RegalAttendance;
+				PRODUCT_NAME = "帝商差勤";
 			};
 			name = Debug;
 		};
@@ -617,10 +622,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RegalAttendance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = regalscan.com.RegalAttendance;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Regal.com.RegalAttendance;
+				PRODUCT_NAME = "帝商差勤";
 			};
 			name = Release;
 		};

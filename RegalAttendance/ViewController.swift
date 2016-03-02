@@ -97,7 +97,7 @@ class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuVie
         dateFormatter.dateFormat = format
        
         let s = dateFormatter.stringFromDate(d)
-        print(s)
+        
         return s
     }
 

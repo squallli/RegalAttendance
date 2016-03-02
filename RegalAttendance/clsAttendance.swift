@@ -11,21 +11,26 @@ import Foundation
 
 class clsAttendance
 {
-    var m_EmployeeName:String?
-    var m_EmployeeENName:String?
-    var m_CardTime:String?
-    var m_CardType:String?
-    var m_Desc:String?
-    
+    var m_EmployeeName:String? = ""
+    var m_cardDesc = NSMutableArray()
     init(){
         
     }
     
-    init(employeeName:String,employeeEnName:String,cardTime:String,cardType:String,Desc:String){
+    init(employeeName:String){
         m_EmployeeName = employeeName
-        m_EmployeeENName = employeeEnName
-        m_CardTime = cardTime
-        m_CardType = cardType
-        m_Desc = Desc
+        
     }
+    
+    func addWithCardDesc(cardDesc:clsCardDesc){
+        m_cardDesc.addObject(cardDesc)
+    }
+}
+
+class clsCardDesc
+{
+    var m_CardTime:String? = ""
+    var m_CardType:String? = ""
+    
+    init(){}
 }
