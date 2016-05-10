@@ -7,11 +7,9 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuViewDelegate{
-
-
-
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var monthLabel: UILabel!
@@ -28,24 +26,10 @@ class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuVie
     var Month:String?
     var selectDay:String?
     
- 
-    
 
-    
-    @IBAction func LogoutClick(sender: AnyObject) {
-        let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        prefs.setObject("", forKey: "UserName")
-        prefs.setObject("", forKey: "Password")
-        prefs.setBool(false, forKey: "ISLOGGEDIN")
-        
-        self.performSegueWithIdentifier("backSegue", sender: self)
-    }
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let SDate = GetDateWithFormat(NSDate(),format: "yyyyMM") + "01"
-        let EDate = GetDateWithFormat(NSDate(),format: "yyyyMM") + "31"
         
         selectDay = GetDateWithFormat(NSDate(),format:"yyyy-MM-dd")
         
@@ -55,28 +39,7 @@ class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuVie
         
         outGoingData = NSMutableDictionary()
         
-        let rest = clsRestful()
-        rest.getJsonData("http://192.168.0.41:81/App/Outgoing?EmpNo=\(Global.UserId!)&SDATE=\(SDate)&EDATE=\(EDate)",onSuccess: {result -> Void in
-            
-            self.refreshCalendar(result)
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                
-                self.tableView.reloadData()
-                self.calendarView.contentController.refreshPresentedMonth()
-            })
-            
-            },onError: {err -> Void in
-                dispatch_async(dispatch_get_main_queue(),{
-                    let quetion = UIAlertController(title: "錯誤!", message: err, preferredStyle: .Alert);
-                    
-                    let okaction = UIAlertAction(title: "OK",style: .Default, handler: nil);
-                    
-                    quetion.addAction(okaction);
-                    self.presentViewController(quetion, animated: true, completion: nil);
-                })
-        })
-     
+        dataBind(NSDate())
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,6 +60,7 @@ class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuVie
         dateFormatter.dateFormat = format
        
         let s = dateFormatter.stringFromDate(d)
+        
         
         return s
     }
@@ -170,8 +134,8 @@ class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuVie
     func supplementaryView(viewOnDayView dayView: DayView) -> UIView {
         let π = M_PI
         
-        let ringSpacing: CGFloat = 3.0
-        let ringInsetWidth: CGFloat = 1.0
+        let ringSpacing: CGFloat = 5.0
+        let ringInsetWidth: CGFloat = 5.0
         let ringVerticalOffset: CGFloat = 1.0
         var ringLayer: CAShapeLayer!
         let ringLineWidth: CGFloat = 3.0
@@ -199,7 +163,9 @@ class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuVie
         let ringPath: UIBezierPath = UIBezierPath(arcCenter: centrePoint, radius: ringRect.width/2.0, startAngle: startAngle, endAngle: endAngle, clockwise: true)
         
         ringLayer.path = ringPath.CGPath
+ 
         ringLayer.frame = newView.layer.bounds
+        
         
         return newView
     }
@@ -238,52 +204,23 @@ class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuVie
             outData?.m_outTime = subJson["OutTime"].string
             outData?.m_Location = subJson["Location"].string
             outData?.m_customer = subJson["CustomerName"].string
+            outData?.m_outId = subJson["OutId"].string
             self.outGoingArray!.addObject(outData!)
             
             self.outGoingData?.setObject(self.outGoingArray!, forKey: subJson["OutDate"].string!)
         }
     }
     
-    func didShowNextMonthView(date: NSDate)
+    func dataBind(date: NSDate)
     {
-        let SDate = GetDateWithFormat(date.dateByAddingTimeInterval(60*60*24),format: "yyyyMM") + "01"
-        let EDate = GetDateWithFormat(date.dateByAddingTimeInterval(60*60*24),format: "yyyyMM") + "31"
-        
-        selectDay = SDate
-        
-        let rest = clsRestful()
-        rest.getJsonData("http://192.168.0.41:81/App/Outgoing?EmpNo=\(Global.UserId!)&SDATE=\(SDate)&EDATE=\(EDate)",onSuccess:{result -> Void in
-            
-            self.refreshCalendar(result)
-            
-            dispatch_async(dispatch_get_main_queue(), {
-                
-                self.tableView.reloadData()
-                self.calendarView.contentController.refreshPresentedMonth()
-            })
-
-            },onError:{err -> Void in
-                dispatch_async(dispatch_get_main_queue(),{
-                    let quetion = UIAlertController(title: "錯誤!", message: err, preferredStyle: .Alert);
-                    
-                    let okaction = UIAlertAction(title: "OK",style: .Default, handler: nil);
-                    
-                    quetion.addAction(okaction);
-                    self.presentViewController(quetion, animated: true, completion: nil);
-                })
-            })
- 
-    }
-    
-    func didShowPreviousMonthView(date: NSDate){
         let SDate = GetDateWithFormat(date,format: "yyyyMM") + "01"
         let EDate = GetDateWithFormat(date,format: "yyyyMM") + "31"
         
         selectDay = SDate
-
+        
         let rest = clsRestful()
-
-        rest.getJsonData("http://192.168.0.41:81/App/Outgoing?EmpNo=\(Global.UserId!)&SDATE=\(SDate)&EDATE=\(EDate)",onSuccess:{result -> Void in
+        
+        rest.getJsonData("\(Global.baseUrl)Outgoing?EmpNo=\(Global.UserId!)&SDATE=\(SDate)&EDATE=\(EDate)",onSuccess:{result -> Void in
             
             self.refreshCalendar(result)
             
@@ -307,6 +244,15 @@ class ViewController: UIViewController ,CVCalendarViewDelegate,CVCalendarMenuVie
         })
 
     }
+    
+    func didShowNextMonthView(date: NSDate)
+    {
+        dataBind(date)
+    }
+    
+    func didShowPreviousMonthView(date: NSDate){
+        dataBind(date)
+    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -323,15 +269,20 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    //填充UITableViewCell中文字標簽的值
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCellCanlendarTableViewCell
         
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
         if let outData:NSMutableArray = outGoingData?.objectForKey(selectDay!) as? NSMutableArray
         {
             if let data = outData[indexPath.row] as? clsOutgoing{
-                cell.setImageName("outside-icon")
+                
                 cell.setCustomer(data.m_customer!)
                 cell.setDate(data.m_outDate!)
                 cell.setLocation(data.m_Location!)
@@ -340,6 +291,70 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
   
         return cell
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        let selectedDay = dateFormatter.dateFromString(selectDay!)
+        
+        if selectedDay?.compare(NSDate()) == NSComparisonResult.OrderedDescending{
+            return true
+        }
+        else
+        {
+            return false
+        }
+        
+    
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            
+            SwiftSpinner.show("資料刪除中")
+            if let outData:NSMutableArray = outGoingData?.objectForKey(selectDay!) as? NSMutableArray
+            {
+                if let data = outData[indexPath.row] as? clsOutgoing{
+                    let rest = clsRestful()
+                    rest.makeGetRequest("\(Global.baseUrl)DeleteOutgoing?OutId=\(data.m_outId!)&EmpNo=\(Global.UserId!)" ,onSuccess: {result -> Void in
+                        
+                            SwiftSpinner.hide()
+                        
+                            let dateFormatter = NSDateFormatter()
+                            dateFormatter.dateFormat = "yyyy-MM-dd"
+                        
+                        
+                            let selectedDay = dateFormatter.dateFromString(self.selectDay!)
+                        
+                            self.dataBind(selectedDay!)
+                        
+                        }, onError: {err -> Void in
+                            dispatch_async(dispatch_get_main_queue(),{
+                                
+                                SwiftSpinner.hide()
+                                
+                                let quetion = UIAlertController(title: "錯誤!", message: err, preferredStyle: .Alert);
+                                
+                                let okaction = UIAlertAction(title: "OK",style: .Default, handler: nil);
+                                
+                                quetion.addAction(okaction);
+                                self.presentViewController(quetion, animated: true, completion: nil);
+                            })
+                        }
+                    )
+                }
+                
+                outData.removeObjectAtIndex(indexPath.row)
+                
+                
+            }
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
 }
 
