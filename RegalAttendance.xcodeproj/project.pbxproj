@@ -88,7 +88,7 @@
 		F34997831C86E53500FE7813 /* OutgoingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutgoingViewController.swift; sourceTree = "<group>"; };
 		F3C1BB9D1C6455E1008CE7D2 /* clsAttendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clsAttendance.swift; sourceTree = "<group>"; };
 		F3D94FF51C9010A200C5E2FE /* RegalAttendance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RegalAttendance-Bridging-Header.h"; sourceTree = "<group>"; };
-		F3D94FFC1C90124C00C5E2FE /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuView.swift; path = ../MenuView.swift; sourceTree = "<group>"; };
+		F3D94FFC1C90124C00C5E2FE /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuView.swift; path = ../../MenuView.swift; sourceTree = "<group>"; };
 		F3D950991C90133700C5E2FE /* DOPNavbarMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOPNavbarMenu.h; sourceTree = "<group>"; };
 		F3D9509A1C90133700C5E2FE /* DOPNavbarMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOPNavbarMenu.m; sourceTree = "<group>"; };
 		F3D9509C1C90137200C5E2FE /* UIView+DOPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DOPExtension.h"; sourceTree = "<group>"; };
@@ -245,7 +245,6 @@
 				F3DD8F181CC469720039C714 /* KDCircularProgress */,
 				F3C1BB9C1C6452C1008CE7D2 /* Image */,
 				F3DB3E481C644658008EC0D0 /* clsGlobal.swift */,
-				F3D94FFC1C90124C00C5E2FE /* MenuView.swift */,
 				F32359F51CE1CACC00195425 /* DatePickerDialog.swift */,
 				F3DB3E491C644658008EC0D0 /* clsOutgoing.swift */,
 				F3DB3E4A1C644658008EC0D0 /* clsRestful.swift */,
@@ -253,12 +252,12 @@
 				F3DB3E531C644658008EC0D0 /* SwiftyJSON.swift */,
 				F3DB3E551C644658008EC0D0 /* UITableViewCellCanlendar.swift */,
 				F3DB3E561C644658008EC0D0 /* UIViewControlAttenadance.swift */,
+				F3DB3E331C6445CE008EC0D0 /* Info.plist */,
 				F3DB3E271C6445CE008EC0D0 /* AppDelegate.swift */,
 				F3DB3E291C6445CE008EC0D0 /* ViewController.swift */,
 				F3DB3E2B1C6445CE008EC0D0 /* Main.storyboard */,
 				F3DB3E2E1C6445CE008EC0D0 /* Assets.xcassets */,
 				F3DB3E301C6445CE008EC0D0 /* LaunchScreen.storyboard */,
-				F3DB3E331C6445CE008EC0D0 /* Info.plist */,
 				F3C1BB9D1C6455E1008CE7D2 /* clsAttendance.swift */,
 				F34997831C86E53500FE7813 /* OutgoingViewController.swift */,
 				F3F624F91CA915A000EA0E6C /* ContainerViewController.swift */,
@@ -280,6 +279,7 @@
 		F3DD8F181CC469720039C714 /* KDCircularProgress */ = {
 			isa = PBXGroup;
 			children = (
+				F3D94FFC1C90124C00C5E2FE /* MenuView.swift */,
 				F3DD8F191CC469720039C714 /* KDCircularProgress.swift */,
 			);
 			path = KDCircularProgress;
