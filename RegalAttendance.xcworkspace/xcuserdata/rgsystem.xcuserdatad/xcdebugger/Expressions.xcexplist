@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[DOPNavbarMenu showInNavigationController:]:DOPNavbarMenu.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "bar.frame">
+            </PersistentString>
+            <PersistentString
+               value = "btn.superview">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "codeGeneratorViewController.(onSuccess(JSON) -&gt; ()).(closure #1):codeGeneratorViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.count">
+            </PersistentString>
+            <PersistentString
+               value = "result[&quot;Query&quot;][&quot;CountDown&quot;].int">
+            </PersistentString>
+            <PersistentString
+               value = "self.labelCode.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "testViewController.viewDidLoad() -&gt; ():testViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "navigationController">
+            </PersistentString>
+            <PersistentString
+               value = "navigationController?.navigationItem.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ContainerViewController.prepareForSegue(UIStoryboardSegue, sender : AnyObject?) -&gt; ():ContainerViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "segue.destinationViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MenueView.viewDidLoad() -&gt; ():MenuView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "menuString as! String">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OutgoingViewController.buttonClickSave(UIButton) -&gt; ():OutgoingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dateFormatter.dateFromString(self.buttonDate.currentTitle!)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginVC.(compareVersion(String) -&gt; ()).(closure #1):LoginVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result[&quot;Query&quot;][&quot;Version&quot;].string">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "onSuccess(JSON) -&gt; ():codeGeneratorViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result[&quot;Query&quot;][&quot;Rid&quot;].string">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
